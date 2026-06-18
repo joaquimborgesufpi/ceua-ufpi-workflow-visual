@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitetura e infraestrutura - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a class="active" href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 04</p>
+          <h1>Arquitetura tecnica e infraestrutura necessaria</h1>
+          <p class="hero-text">
+            O sistema opera hoje como um monolito modular com FastAPI, frontend estatico e banco
+            PostgreSQL, publicado por proxy reverso e empacotado com Docker Compose.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Arquitetura logica</p>
+              <h2>Como as camadas se organizam</h2>
+            </div>
+          </div>
+          <div class="infra-grid">
+            <article class="infra-card"><h3>Frontend</h3><p>HTML, CSS e JavaScript vanilla servidos pela propria aplicacao.</p></article>
+            <article class="infra-card"><h3>Backend</h3><p>FastAPI com routers, services, repositories, models, schemas e core.</p></article>
+            <article class="infra-card"><h3>Banco</h3><p>PostgreSQL relacional com migrations Alembic, historicos e tabelas de governanca.</p></article>
+            <article class="infra-card"><h3>Uploads</h3><p>Arquivos PDF gravados fora da raiz publica, com metadados e controle de acesso.</p></article>
+            <article class="infra-card"><h3>Proxy</h3><p>Nginx ou Nginx Proxy Manager como camada de HTTPS e exposicao controlada.</p></article>
+            <article class="infra-card"><h3>Seguranca</h3><p>JWT, RBAC, rate limit de login, docs protegidos e endurecimento para producao.</p></article>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Infra minima</p>
+              <h2>O que e necessario para subir em outro ambiente</h2>
+            </div>
+          </div>
+          <div class="stack-list panel">
+            <div class="stack-item"><strong>Servidor Linux</strong><span>Com Docker, Docker Compose e acesso administrativo controlado.</span></div>
+            <div class="stack-item"><strong>Container web</strong><span>Aplicacao FastAPI servindo API e frontend estatico.</span></div>
+            <div class="stack-item"><strong>Container db</strong><span>PostgreSQL com volume persistente e backup regular.</span></div>
+            <div class="stack-item"><strong>Proxy reverso</strong><span>Nginx ou NPM para 80/443, redirect para HTTPS e certificado valido.</span></div>
+            <div class="stack-item"><strong>DNS</strong><span>Dominio apontando para o proxy publico ou rede publicada.</span></div>
+            <div class="stack-item"><strong>Storage</strong><span>Diretorio persistente para uploads, preferencialmente com backup separado.</span></div>
+            <div class="stack-item"><strong>Segredos</strong><span>JWT secret, credenciais do banco e admin inicial fora do repositorio.</span></div>
+            <div class="stack-item"><strong>Observabilidade</strong><span>Health check, logs, teste de restore e rotina minima de verificacao.</span></div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="panel">
+            <p class="section-kicker">Leitura de producao</p>
+            <h2>Arquitetura resumida</h2>
+            <div class="ascii-diagram">
+              Navegador do usuario
+              <br />&darr;
+              <br />Proxy HTTPS / Nginx Proxy Manager
+              <br />&darr;
+              <br />Aplicacao web FastAPI
+              <br />&darr;
+              <br />PostgreSQL + volume de uploads + logs/auditoria
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UML casos de uso - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a class="active" href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 08</p>
+          <h1>UML de casos de uso</h1>
+          <p class="hero-text">
+            O diagrama abaixo mostra os atores externos e as interacoes principais esperadas do sistema CEUA CAFS-UFPI.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 820" role="img" aria-labelledby="usecase-title usecase-desc">
+              <title id="usecase-title">Casos de uso do sistema CEUA</title>
+              <desc id="usecase-desc">Atores e casos de uso principais de solicitante, secretaria, relator, admin e provedores externos.</desc>
+
+              <rect x="250" y="40" width="760" height="730" rx="16" class="note-box" />
+              <text x="505" y="78" class="note-title">Sistema CEUA CAFS-UFPI</text>
+
+              <text x="70" y="150" class="node-title node-title-sm">Solicitante</text>
+              <line x1="120" y1="162" x2="250" y2="162" class="arrow-line" />
+              <text x="65" y="360" class="node-title node-title-sm">Secretaria</text>
+              <line x1="120" y1="372" x2="250" y2="372" class="arrow-line" />
+              <text x="65" y="565" class="node-title node-title-sm">Relator CEUA</text>
+              <line x1="135" y1="577" x2="250" y2="577" class="arrow-line" />
+              <text x="1040" y="180" class="node-title node-title-sm">Administrador</text>
+              <line x1="1010" y1="192" x2="1140" y2="192" class="arrow-line" />
+              <text x="1045" y="420" class="node-title node-title-sm">AD / Google / Gov.br</text>
+              <line x1="1010" y1="432" x2="1180" y2="432" class="arrow-line" />
+
+              <ellipse cx="430" cy="140" rx="130" ry="34" class="usecase" />
+              <text x="360" y="147" class="usecase-text">Cadastrar e autenticar</text>
+              <ellipse cx="430" cy="220" rx="130" ry="34" class="usecase" />
+              <text x="342" y="227" class="usecase-text">Criar protocolo em rascunho</text>
+              <ellipse cx="430" cy="300" rx="130" ry="34" class="usecase" />
+              <text x="338" y="307" class="usecase-text">Anexar documentos obrigatorios</text>
+              <ellipse cx="430" cy="380" rx="130" ry="34" class="usecase" />
+              <text x="364" y="387" class="usecase-text">Submeter protocolo</text>
+              <ellipse cx="430" cy="460" rx="130" ry="34" class="usecase" />
+              <text x="349" y="467" class="usecase-text">Acompanhar andamento</text>
+              <ellipse cx="430" cy="540" rx="130" ry="34" class="usecase" />
+              <text x="340" y="547" class="usecase-text">Baixar parecer liberado</text>
+
+              <ellipse cx="690" cy="210" rx="130" ry="34" class="usecase" />
+              <text x="632" y="217" class="usecase-text">Validar cadastro</text>
+              <ellipse cx="690" cy="290" rx="130" ry="34" class="usecase" />
+              <text x="640" y="297" class="usecase-text">Triar protocolo</text>
+              <ellipse cx="690" cy="370" rx="130" ry="34" class="usecase" />
+              <text x="622" y="377" class="usecase-text">Distribuir relator</text>
+              <ellipse cx="690" cy="450" rx="130" ry="34" class="usecase" />
+              <text x="607" y="457" class="usecase-text">Liberar parecer ao solicitante</text>
+              <ellipse cx="690" cy="530" rx="130" ry="34" class="usecase" />
+              <text x="612" y="537" class="usecase-text">Controlar fila operacional</text>
+
+              <ellipse cx="860" cy="250" rx="120" ry="34" class="usecase" />
+              <text x="798" y="257" class="usecase-text">Consultar atribuicoes</text>
+              <ellipse cx="860" cy="340" rx="120" ry="34" class="usecase" />
+              <text x="808" y="347" class="usecase-text">Emitir parecer</text>
+              <ellipse cx="860" cy="430" rx="120" ry="34" class="usecase" />
+              <text x="788" y="437" class="usecase-text">Baixar PDF institucional</text>
+
+              <ellipse cx="860" cy="560" rx="120" ry="34" class="usecase" />
+              <text x="790" y="567" class="usecase-text">Gerenciar usuarios e perfis</text>
+              <ellipse cx="860" cy="640" rx="120" ry="34" class="usecase" />
+              <text x="774" y="647" class="usecase-text">Acessar docs protegidos e auditoria</text>
+
+              <line x1="250" y1="162" x2="300" y2="140" class="uml-link" />
+              <line x1="250" y1="162" x2="300" y2="220" class="uml-link" />
+              <line x1="250" y1="162" x2="300" y2="300" class="uml-link" />
+              <line x1="250" y1="162" x2="300" y2="380" class="uml-link" />
+              <line x1="250" y1="162" x2="300" y2="460" class="uml-link" />
+              <line x1="250" y1="162" x2="300" y2="540" class="uml-link" />
+
+              <line x1="250" y1="372" x2="560" y2="210" class="uml-link" />
+              <line x1="250" y1="372" x2="560" y2="290" class="uml-link" />
+              <line x1="250" y1="372" x2="560" y2="370" class="uml-link" />
+              <line x1="250" y1="372" x2="560" y2="450" class="uml-link" />
+              <line x1="250" y1="372" x2="560" y2="530" class="uml-link" />
+
+              <line x1="250" y1="577" x2="740" y2="250" class="uml-link" />
+              <line x1="250" y1="577" x2="740" y2="340" class="uml-link" />
+              <line x1="250" y1="577" x2="740" y2="430" class="uml-link" />
+
+              <line x1="1010" y1="192" x2="980" y2="560" class="uml-link" />
+              <line x1="1010" y1="192" x2="980" y2="640" class="uml-link" />
+              <line x1="1010" y1="432" x2="560" y2="140" class="uml-link dashed" />
+            </svg>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

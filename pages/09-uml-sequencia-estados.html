@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UML sequencia e estados - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a class="active" href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 09</p>
+          <h1>UML de sequencia e diagrama de estados</h1>
+          <p class="hero-text">
+            Esta pagina combina a leitura temporal de uma submissao com a maquina de estados do protocolo.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head"><div><p class="section-kicker">Sequencia</p><h2>Submissao e julgamento</h2></div></div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 860" role="img" aria-labelledby="seq-title seq-desc">
+              <title id="seq-title">Sequencia de submissao e julgamento</title>
+              <desc id="seq-desc">Interacao entre solicitante, frontend, api, servicos, banco, uploads e relator.</desc>
+              <text x="80" y="70" class="node-title node-title-sm">Solicitante</text>
+              <text x="270" y="70" class="node-title node-title-sm">Frontend</text>
+              <text x="460" y="70" class="node-title node-title-sm">API</text>
+              <text x="620" y="70" class="node-title node-title-sm">Service</text>
+              <text x="810" y="70" class="node-title node-title-sm">DB / Uploads</text>
+              <text x="1040" y="70" class="node-title node-title-sm">Secretaria / Relator</text>
+
+              <line x1="120" y1="100" x2="120" y2="780" class="uml-link dashed" />
+              <line x1="320" y1="100" x2="320" y2="780" class="uml-link dashed" />
+              <line x1="500" y1="100" x2="500" y2="780" class="uml-link dashed" />
+              <line x1="690" y1="100" x2="690" y2="780" class="uml-link dashed" />
+              <line x1="900" y1="100" x2="900" y2="780" class="uml-link dashed" />
+              <line x1="1100" y1="100" x2="1100" y2="780" class="uml-link dashed" />
+
+              <path d="M120 140 H320" class="arrow-line" />
+              <text x="150" y="132" class="note-text">preenche formulario</text>
+              <path d="M320 190 H500" class="arrow-line" />
+              <text x="335" y="182" class="note-text">POST /api/protocolos</text>
+              <path d="M500 240 H690" class="arrow-line" />
+              <text x="525" y="232" class="note-text">criar rascunho</text>
+              <path d="M690 290 H900" class="arrow-line" />
+              <text x="728" y="282" class="note-text">grava protocolo</text>
+              <path d="M120 360 H320" class="arrow-line" />
+              <text x="150" y="352" class="note-text">anexa PDFs</text>
+              <path d="M320 410 H500" class="arrow-line" />
+              <text x="334" y="402" class="note-text">POST /documentos</text>
+              <path d="M500 460 H690" class="arrow-line" />
+              <text x="520" y="452" class="note-text">validar e salvar</text>
+              <path d="M690 510 H900" class="arrow-line" />
+              <text x="720" y="502" class="note-text">metadados + upload</text>
+              <path d="M320 580 H500" class="arrow-line" />
+              <text x="332" y="572" class="note-text">POST /submeter</text>
+              <path d="M500 630 H690" class="arrow-line" />
+              <text x="520" y="622" class="note-text">validar docs/campos</text>
+              <path d="M690 680 H900" class="arrow-line" />
+              <text x="716" y="672" class="note-text">status SUBMETIDO</text>
+              <path d="M1100 730 H690" class="arrow-line" />
+              <text x="820" y="722" class="note-text">triagem, distribuicao e parecer</text>
+            </svg>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head"><div><p class="section-kicker">Estados</p><h2>Maquina de estados do protocolo</h2></div></div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 420" role="img" aria-labelledby="state-title state-desc">
+              <title id="state-title">Estados do protocolo</title>
+              <desc id="state-desc">Fluxo entre rascunho, submetido, triagem, distribuido, julgamento, pendencia e concluido.</desc>
+              <defs>
+                <marker id="state-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L10,3 L0,6 Z" fill="#28574e"></path>
+                </marker>
+              </defs>
+              <circle cx="70" cy="200" r="18" fill="#28574e" />
+              <rect x="120" y="160" width="140" height="78" rx="10" class="node actor-solicitante-fill" />
+              <text x="150" y="205" class="node-title node-title-sm">RASCUNHO</text>
+              <rect x="300" y="160" width="140" height="78" rx="10" class="node actor-solicitante-fill" />
+              <text x="324" y="205" class="node-title node-title-sm">SUBMETIDO</text>
+              <rect x="480" y="160" width="150" height="78" rx="10" class="node actor-secretaria-fill" />
+              <text x="504" y="205" class="node-title node-title-sm">EM_TRIAGEM</text>
+              <rect x="670" y="160" width="150" height="78" rx="10" class="node actor-secretaria-fill" />
+              <text x="698" y="205" class="node-title node-title-sm">DISTRIBUIDO</text>
+              <rect x="860" y="160" width="170" height="78" rx="10" class="node actor-relator-fill" />
+              <text x="885" y="205" class="node-title node-title-sm">EM_JULGAMENTO</text>
+              <rect x="1080" y="75" width="150" height="78" rx="10" class="node actor-sistema-fill" />
+              <text x="1108" y="120" class="node-title node-title-sm">CONCLUIDO</text>
+              <rect x="1080" y="255" width="150" height="78" rx="10" class="node actor-secretaria-fill" />
+              <text x="1092" y="300" class="node-title node-title-sm">COM_PENDENCIA</text>
+              <path d="M88 200 H120" class="arrow-line" style="marker-end:url(#state-arrow)" />
+              <path d="M260 200 H300" class="arrow-line" style="marker-end:url(#state-arrow)" />
+              <path d="M440 200 H480" class="arrow-line" style="marker-end:url(#state-arrow)" />
+              <path d="M630 200 H670" class="arrow-line" style="marker-end:url(#state-arrow)" />
+              <path d="M1030 180 C1060 180 1060 120 1080 114" class="arrow-line" style="marker-end:url(#state-arrow)" />
+              <path d="M1030 218 C1060 218 1060 280 1080 294" class="arrow-line" style="marker-end:url(#state-arrow)" />
+              <path d="M1080 294 C950 380 760 360 745 238" class="arrow-line dashed" style="marker-end:url(#state-arrow)" />
+            </svg>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

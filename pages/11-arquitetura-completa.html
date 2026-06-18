@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitetura completa - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a class="active" href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 11</p>
+          <h1>Arquitetura completa da aplicacao</h1>
+          <p class="hero-text">
+            Esta pagina consolida numa leitura unica a visao de produto, a arquitetura do sistema,
+            o modelo de dados, os fluxos operacionais, os requisitos e o roteiro de evolucao.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-label">Tipo de sistema</span>
+            <strong>Monolito modular</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Nucleo funcional</span>
+            <strong>Protocolos CEUA ponta a ponta</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Camadas futuras</span>
+            <strong>Notificacoes, BI e IA</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Resumo executivo</p>
+              <h2>O que o produto deve ser</h2>
+            </div>
+          </div>
+          <div class="two-column">
+            <div class="panel">
+              <p class="hero-text compact">
+                O CEUA CAFS-UFPI deve ser a plataforma institucional unica para cadastro, submissao,
+                triagem, distribuicao, julgamento, parecer, rastreabilidade e governanca do fluxo CEUA.
+              </p>
+            </div>
+            <div class="panel">
+              <div class="badge-list">
+                <span class="soft-badge">Acesso institucional</span>
+                <span class="soft-badge">Fluxo CEUA</span>
+                <span class="soft-badge">Relatoria</span>
+                <span class="soft-badge">PDF institucional</span>
+                <span class="soft-badge">Auditoria</span>
+                <span class="soft-badge">Dashboard futuro</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Stack e arquitetura</p>
+              <h2>Como a solucao se organiza</h2>
+            </div>
+          </div>
+          <div class="infra-grid">
+            <article class="infra-card"><h3>Frontend</h3><p>HTML, CSS e JavaScript vanilla servidos pela aplicacao.</p></article>
+            <article class="infra-card"><h3>Backend</h3><p>FastAPI com routers, services, repositories, models e schemas.</p></article>
+            <article class="infra-card"><h3>Banco</h3><p>PostgreSQL relacional com historicos, anexos e governanca.</p></article>
+            <article class="infra-card"><h3>Infra</h3><p>Docker Compose, proxy reverso, HTTPS e volumes persistentes.</p></article>
+            <article class="infra-card"><h3>Seguranca</h3><p>JWT, RBAC, docs protegidos, uploads privados e hardening progressivo.</p></article>
+            <article class="infra-card"><h3>Evolucao</h3><p>Base preparada para Google, Gov.br, notificacoes, BI e IA.</p></article>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Leitura MVC</p>
+              <h2>Camadas tecnicas da aplicacao</h2>
+            </div>
+          </div>
+          <div class="portal-grid">
+            <article class="portal-card as-panel"><h3>View</h3><p>Telas, layout, formularios, navegacao e experiencia institucional.</p></article>
+            <article class="portal-card as-panel"><h3>Controller</h3><p>Routers e camada HTTP que recebem requisicoes e aplicam autorizacao.</p></article>
+            <article class="portal-card as-panel"><h3>Services</h3><p>Regra de negocio, transicoes de estado, julgamento e seguranca funcional.</p></article>
+            <article class="portal-card as-panel"><h3>Repositories</h3><p>Persistencia, consultas, filtros e acesso estruturado aos dados.</p></article>
+            <article class="portal-card as-panel"><h3>Models</h3><p>Entidades ORM, enums, relacionamentos e dicionario relacional.</p></article>
+            <article class="portal-card as-panel"><h3>Recursos externos</h3><p>Banco, uploads, AD, e-mail e futuras identidades externas.</p></article>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">MER resumido</p>
+              <h2>Nucleo de dados do sistema</h2>
+            </div>
+          </div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 420" role="img" aria-labelledby="arch-mer-title arch-mer-desc">
+              <title id="arch-mer-title">MER resumido da arquitetura completa</title>
+              <desc id="arch-mer-desc">Usuarios, protocolos e entidades orbitais do fluxo institucional.</desc>
+              <rect x="70" y="160" width="180" height="80" rx="10" class="node actor-admin-fill" />
+              <text x="105" y="205" class="node-title node-title-sm">usuarios</text>
+              <rect x="320" y="160" width="220" height="80" rx="10" class="node actor-relator-fill" />
+              <text x="380" y="205" class="node-title node-title-sm">protocolos</text>
+              <rect x="610" y="70" width="220" height="80" rx="10" class="node actor-solicitante-fill" />
+              <text x="655" y="115" class="node-title node-title-sm">documentos_anexos</text>
+              <rect x="610" y="170" width="220" height="80" rx="10" class="node actor-secretaria-fill" />
+              <text x="645" y="215" class="node-title node-title-sm">status_historico</text>
+              <rect x="610" y="270" width="220" height="80" rx="10" class="node actor-relator-fill" />
+              <text x="650" y="315" class="node-title node-title-sm">julgamentos</text>
+              <rect x="920" y="110" width="220" height="80" rx="10" class="node actor-sistema-fill" />
+              <text x="975" y="155" class="node-title node-title-sm">formularios_respostas</text>
+              <rect x="920" y="230" width="220" height="80" rx="10" class="node actor-admin-fill" />
+              <text x="985" y="275" class="node-title node-title-sm">auditoria</text>
+              <line x1="250" y1="200" x2="320" y2="200" class="uml-link" />
+              <line x1="540" y1="200" x2="610" y2="110" class="uml-link" />
+              <line x1="540" y1="200" x2="610" y2="210" class="uml-link" />
+              <line x1="540" y1="200" x2="610" y2="310" class="uml-link" />
+              <line x1="830" y1="110" x2="920" y2="150" class="uml-link" />
+              <line x1="830" y1="210" x2="920" y2="270" class="uml-link" />
+            </svg>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Fluxo e UML</p>
+              <h2>Como o sistema se comporta</h2>
+            </div>
+          </div>
+          <div class="three-column">
+            <div class="panel">
+              <h3>Casos de uso</h3>
+              <p>Solicitante submete, secretaria opera, relator julga e admin governa.</p>
+            </div>
+            <div class="panel">
+              <h3>Sequencia</h3>
+              <p>Frontend chama API, services aplicam regra, persistencia registra, auditoria rastreia.</p>
+            </div>
+            <div class="panel">
+              <h3>Estados</h3>
+              <p>RASCUNHO, SUBMETIDO, EM_TRIAGEM, DISTRIBUIDO, EM_JULGAMENTO, COM_PENDENCIA e CONCLUIDO.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">DFD e escopo</p>
+              <h2>Fluxos funcionais do produto</h2>
+            </div>
+          </div>
+          <div class="stack-list panel">
+            <div class="stack-item"><strong>Nivel 0</strong><span>Usuarios, sistema, banco, uploads e identidades externas em visao de contexto.</span></div>
+            <div class="stack-item"><strong>Nivel 1</strong><span>Autenticacao, usuarios, protocolos, julgamento e auditoria como processos internos.</span></div>
+            <div class="stack-item"><strong>Escopo funcional</strong><span>Cadastro, acesso, protocolos, relatoria, governanca, notificacoes e camada gerencial futura.</span></div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Requisitos</p>
+              <h2>O que o produto deve cumprir</h2>
+            </div>
+          </div>
+          <div class="requirement-grid">
+            <article class="req-card"><h3>Funcionais</h3><p>Usuarios, protocolos, anexos, triagem, distribuicao, julgamento, auditoria, notificacoes e dashboards.</p></article>
+            <article class="req-card soft"><h3>Nao funcionais</h3><p>Seguranca, disponibilidade, manutenibilidade, privacidade, usabilidade e observabilidade.</p></article>
+            <article class="req-card"><h3>Estado atual</h3><p>Ja existe um nucleo funcional forte, mas a visao-alvo ainda inclui integracoes e camada analitica.</p></article>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Roadmap sintetico</p>
+              <h2>Proximo percurso natural</h2>
+            </div>
+          </div>
+          <div class="timeline-list">
+            <article class="timeline-row">
+              <span class="timeline-index">1</span>
+              <div><h3>Fechar operacao institucional</h3><p>Homologar formularios, concluir refinamentos de fluxo e endurecer producao.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">2</span>
+              <div><h3>Adicionar integracoes</h3><p>Google, Gov.br, notificacoes por e-mail e recuperacao de senha institucional.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">3</span>
+              <div><h3>Subir camada gerencial</h3><p>Dashboard operacional, BI, indicadores por fila, relator e tempo medio.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">4</span>
+              <div><h3>Evoluir UX e plataforma</h3><p>Depois do fluxo estabilizado, avaliar migracao controlada para Next.js.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">5</span>
+              <div><h3>Adicionar IA com criterio</h3><p>Usar IA como apoio a triagem, resumo e indicadores, sem deslocar a decisao institucional.</p></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visao geral - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a class="active" href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 01</p>
+          <h1>Visao geral do produto</h1>
+          <p class="hero-text">
+            O produto CEUA CAFS-UFPI deve ser a plataforma institucional que concentra cadastro,
+            submissao, triagem, distribuicao, julgamento, parecer, rastreabilidade e governanca
+            do fluxo CEUA de ponta a ponta.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Produto a ser concebido</p>
+              <h2>O que o sistema deve entregar como visao-alvo</h2>
+            </div>
+          </div>
+          <div class="portal-grid">
+            <article class="portal-card as-panel">
+              <h3>Acesso institucional</h3>
+              <p>Cadastro, autenticacao, validacao de acesso, recuperacao de senha e identidade externa institucional.</p>
+            </article>
+            <article class="portal-card as-panel">
+              <h3>Gestao completa de protocolos</h3>
+              <p>Rascunho, anexos, submissao, triagem, distribuicao, julgamento, pendencia, conclusao e historico.</p>
+            </article>
+            <article class="portal-card as-panel">
+              <h3>Relatoria e decisao</h3>
+              <p>Atribuicoes por relator, parecer padronizado, PDF institucional, liberacao e rastreabilidade decisoria.</p>
+            </article>
+            <article class="portal-card as-panel">
+              <h3>Governanca e inteligencia</h3>
+              <p>RBAC, auditoria, notificacoes, dashboards, BI operacional e camada futura de apoio por IA.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Atores institucionais</p>
+              <h2>Quem participa do processo</h2>
+            </div>
+          </div>
+          <div class="actors-grid">
+            <article class="actor-card actor-solicitante">
+              <span class="actor-badge">Solicitante</span>
+              <h3>Responsavel pelo protocolo</h3>
+              <p>Cria, anexa, submete, acompanha e baixa o parecer quando liberado.</p>
+            </article>
+            <article class="actor-card actor-secretaria">
+              <span class="actor-badge">Secretaria</span>
+              <h3>Operacao da CEUA</h3>
+              <p>Executa triagem, controla fila, distribui relatoria e conduz o fluxo administrativo.</p>
+            </article>
+            <article class="actor-card actor-relator">
+              <span class="actor-badge">Membro CEUA</span>
+              <h3>Relator</h3>
+              <p>Analisa o protocolo atribuido e emite parecer no julgamento.</p>
+            </article>
+            <article class="actor-card actor-admin">
+              <span class="actor-badge">Admin</span>
+              <h3>Governanca do sistema</h3>
+              <p>Gerencia usuarios, perfis, validacoes, auditoria e acesso tecnico.</p>
+            </article>
+            <article class="actor-card actor-sistema">
+              <span class="actor-badge">Sistema</span>
+              <h3>Camada de controle</h3>
+              <p>Aplica regras, registra eventos, controla estados e gera o PDF institucional.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="two-column">
+            <div class="panel">
+              <p class="section-kicker">Capacidades previstas</p>
+              <h2>Componentes esperados no produto final</h2>
+              <div class="stack-list">
+                <div class="stack-item"><strong>1.</strong><span>Gestao de usuarios, perfis, expiracao, reativacao e identidades externas.</span></div>
+                <div class="stack-item"><strong>2.</strong><span>Fluxo CEUA completo com regras por status e rastreabilidade institucional.</span></div>
+                <div class="stack-item"><strong>3.</strong><span>Formularios dinamicos aderentes aos modelos oficiais e documentos obrigatorios por tipo.</span></div>
+                <div class="stack-item"><strong>4.</strong><span>Relatoria assistida, parecer padronizado, PDF e liberacao controlada ao solicitante.</span></div>
+                <div class="stack-item"><strong>5.</strong><span>Camada gerencial com notificacoes, dashboards, BI e apoio analitico futuro.</span></div>
+              </div>
+            </div>
+            <div class="panel">
+              <p class="section-kicker">Estado atual preservado</p>
+              <h2>O que ja existe hoje como base do produto</h2>
+              <div class="badge-list">
+                <span class="soft-badge">Login local</span>
+                <span class="soft-badge">Usuarios e perfis</span>
+                <span class="soft-badge">Fluxo principal CEUA</span>
+                <span class="soft-badge">Documentos obrigatorios</span>
+                <span class="soft-badge">Parecer em PDF</span>
+                <span class="soft-badge">Auditoria e RBAC</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="panel">
+            <p class="section-kicker">Frentes ainda em expansao</p>
+            <h2>O que completa a concepcao institucional</h2>
+            <div class="badge-list">
+              <span class="soft-badge">Notificacoes por e-mail</span>
+              <span class="soft-badge">Google login</span>
+              <span class="soft-badge">Gov.br</span>
+              <span class="soft-badge">Dashboard operacional</span>
+              <span class="soft-badge">BI gerencial</span>
+              <span class="soft-badge">IA de apoio</span>
+              <span class="soft-badge">Homologacao final contra DOCX oficiais</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

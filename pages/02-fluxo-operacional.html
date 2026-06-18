@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluxo operacional - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a class="active" href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 02</p>
+          <h1>Fluxo operacional da CEUA</h1>
+          <p class="hero-text">
+            Esta pagina mostra o ciclo de vida do protocolo, quem atua em cada etapa e como o fluxo
+            transita entre submissao, triagem, distribuicao, julgamento, pendencia e conclusao.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Atores</p>
+              <h2>Destaque por ator do fluxo</h2>
+            </div>
+            <div class="filter-toolbar" aria-label="Filtro de destaque por ator">
+              <button class="filter-chip active" data-actor-filter="all" type="button">Todos</button>
+              <button class="filter-chip" data-actor-filter="solicitante" type="button">Solicitante</button>
+              <button class="filter-chip" data-actor-filter="secretaria" type="button">Secretaria</button>
+              <button class="filter-chip" data-actor-filter="relator" type="button">Relator CEUA</button>
+              <button class="filter-chip" data-actor-filter="admin" type="button">Admin</button>
+              <button class="filter-chip" data-actor-filter="sistema" type="button">Sistema</button>
+            </div>
+          </div>
+          <div class="actors-grid">
+            <article class="actor-card actor-solicitante" data-actor="solicitante">
+              <span class="actor-badge">Solicitante</span>
+              <h3>Origem do protocolo</h3>
+              <p>Controla criacao, anexos, submissao e consulta do retorno.</p>
+            </article>
+            <article class="actor-card actor-secretaria" data-actor="secretaria">
+              <span class="actor-badge">Secretaria</span>
+              <h3>Opera a fila</h3>
+              <p>Triagem, distribuicao, acompanhamento e liberacao operacional.</p>
+            </article>
+            <article class="actor-card actor-relator" data-actor="relator">
+              <span class="actor-badge">Relator</span>
+              <h3>Julga</h3>
+              <p>Analisa a atribuicao e emite o parecer institucional.</p>
+            </article>
+            <article class="actor-card actor-admin" data-actor="admin">
+              <span class="actor-badge">Admin</span>
+              <h3>Destrava e governa</h3>
+              <p>Atua em gestao de usuarios, perfis e acessos sensiveis.</p>
+            </article>
+            <article class="actor-card actor-sistema" data-actor="sistema">
+              <span class="actor-badge">Sistema</span>
+              <h3>Amarra as regras</h3>
+              <p>Garante transicoes, auditoria, permissao e PDF do parecer.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Diagrama de status</p>
+              <h2>Ciclo de vida do protocolo</h2>
+            </div>
+            <p class="section-note">Transicoes baseadas no backend real do sistema.</p>
+          </div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 520" role="img" aria-labelledby="workflow-title workflow-desc">
+              <title id="workflow-title">Diagrama do fluxo operacional CEUA</title>
+              <desc id="workflow-desc">Fluxo entre rascunho, submissao, triagem, distribuicao, julgamento, pendencia e conclusao.</desc>
+              <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L10,3 L0,6 Z" fill="#28574e"></path>
+                </marker>
+              </defs>
+              <rect x="30" y="80" width="160" height="86" rx="10" class="node actor-solicitante-fill" />
+              <text x="55" y="116" class="node-title">RASCUNHO</text>
+              <text x="55" y="142" class="node-text">Solicitante cria</text>
+              <rect x="220" y="80" width="160" height="86" rx="10" class="node actor-solicitante-fill" />
+              <text x="245" y="116" class="node-title">SUBMETIDO</text>
+              <text x="245" y="142" class="node-text">Envio formal</text>
+              <rect x="410" y="80" width="170" height="86" rx="10" class="node actor-secretaria-fill" />
+              <text x="435" y="116" class="node-title">EM_TRIAGEM</text>
+              <text x="435" y="142" class="node-text">Conferencia inicial</text>
+              <rect x="610" y="80" width="170" height="86" rx="10" class="node actor-secretaria-fill" />
+              <text x="635" y="116" class="node-title">DISTRIBUIDO</text>
+              <text x="635" y="142" class="node-text">Relator designado</text>
+              <rect x="810" y="80" width="185" height="86" rx="10" class="node actor-relator-fill" />
+              <text x="835" y="116" class="node-title">EM_JULGAMENTO</text>
+              <text x="835" y="142" class="node-text">Parecer em elaboracao</text>
+              <rect x="1040" y="40" width="180" height="86" rx="10" class="node actor-sistema-fill" />
+              <text x="1065" y="76" class="node-title">CONCLUIDO</text>
+              <text x="1065" y="102" class="node-text">Encerrado</text>
+              <rect x="1040" y="170" width="180" height="86" rx="10" class="node actor-secretaria-fill" />
+              <text x="1065" y="206" class="node-title">COM_PENDENCIA</text>
+              <text x="1065" y="232" class="node-text">Retorna ao fluxo</text>
+              <path d="M190 123 H220" class="arrow-line" />
+              <path d="M380 123 H410" class="arrow-line" />
+              <path d="M580 123 H610" class="arrow-line" />
+              <path d="M780 123 H810" class="arrow-line" />
+              <path d="M995 102 H1040" class="arrow-line" />
+              <path d="M995 145 C1020 145 1025 180 1040 212" class="arrow-line" />
+              <path d="M1040 255 C920 360 720 360 610 168" class="arrow-line dashed" />
+              <path d="M1040 214 C940 250 860 255 810 168" class="arrow-line dashed" />
+            </svg>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Ponta a ponta</p>
+              <h2>Etapas em ordem pratica</h2>
+            </div>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card" data-actor="solicitante"><span class="step-index">1</span><h3>Cadastro</h3><p>Solicitante cria conta e acessa o sistema.</p></article>
+            <article class="step-card" data-actor="solicitante"><span class="step-index">2</span><h3>Rascunho</h3><p>O protocolo nasce em `RASCUNHO`.</p></article>
+            <article class="step-card" data-actor="solicitante"><span class="step-index">3</span><h3>Anexos</h3><p>Os documentos obrigatorios sao anexados conforme o formulario.</p></article>
+            <article class="step-card" data-actor="admin"><span class="step-index">4</span><h3>Validacao</h3><p>Se preciso, o cadastro e validado pelo admin.</p></article>
+            <article class="step-card" data-actor="solicitante"><span class="step-index">5</span><h3>Submissao</h3><p>O protocolo passa a `SUBMETIDO`.</p></article>
+            <article class="step-card" data-actor="secretaria"><span class="step-index">6</span><h3>Triagem</h3><p>A secretaria confere e organiza a fila em `EM_TRIAGEM`.</p></article>
+            <article class="step-card" data-actor="secretaria"><span class="step-index">7</span><h3>Distribuicao</h3><p>Define relator e move para `DISTRIBUIDO`.</p></article>
+            <article class="step-card" data-actor="secretaria relator"><span class="step-index">8</span><h3>Julgamento</h3><p>O fluxo entra em `EM_JULGAMENTO`.</p></article>
+            <article class="step-card" data-actor="relator"><span class="step-index">9</span><h3>Parecer</h3><p>O relator emite o parecer tecnico.</p></article>
+            <article class="step-card" data-actor="sistema"><span class="step-index">10</span><h3>PDF</h3><p>O sistema gera o parecer institucional em PDF.</p></article>
+            <article class="step-card" data-actor="secretaria"><span class="step-index">11</span><h3>Liberacao</h3><p>A secretaria libera o parecer ao solicitante quando cabivel.</p></article>
+            <article class="step-card" data-actor="solicitante"><span class="step-index">12</span><h3>Download</h3><p>O solicitante baixa o documento institucional.</p></article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

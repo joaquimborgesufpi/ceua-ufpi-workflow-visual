@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Requisitos - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a class="active" href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 06</p>
+          <h1>Requisitos funcionais e nao funcionais</h1>
+          <p class="hero-text">
+            Esta pagina apresenta os requisitos do produto a ser entregue, deixando o estado atual
+            apenas como referencia de maturidade e cobertura parcial do escopo.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Requisitos funcionais do produto</p>
+              <h2>O que o sistema deve fazer</h2>
+            </div>
+          </div>
+          <div class="requirement-grid">
+            <article class="req-card"><h3>RF01 Cadastro e autenticacao</h3><p>Permitir cadastro, login, validacao de acesso, recuperacao de senha e autenticacao externa conforme politica institucional.</p></article>
+            <article class="req-card"><h3>RF02 Gestao de usuarios</h3><p>Permitir listar, filtrar, criar, editar, validar, expirar, reativar, redefinir senha e governar perfis operacionais.</p></article>
+            <article class="req-card"><h3>RF03 Criacao de protocolo</h3><p>Permitir criar rascunho, editar dados, anexar documentos e manter ownership por solicitante.</p></article>
+            <article class="req-card"><h3>RF04 Submissao controlada</h3><p>Validar campos minimos, documentos obrigatorios e regras de acesso antes da submissao formal.</p></article>
+            <article class="req-card"><h3>RF05 Triagem e distribuicao</h3><p>Permitir triagem, geracao de numero institucional, definicao de relator e controle de fila.</p></article>
+            <article class="req-card"><h3>RF06 Julgamento CEUA</h3><p>Permitir ao relator emitir parecer, registrar decisao, gerar PDF e devolver pendencia ou conclusao.</p></article>
+            <article class="req-card"><h3>RF07 Consulta e acompanhamento</h3><p>Permitir ao solicitante, secretaria, relator e admin acompanhar protocolos conforme perfil e permissao.</p></article>
+            <article class="req-card"><h3>RF08 Auditoria</h3><p>Registrar eventos sensiveis, historico de status, contexto da acao e trilha institucional de uso.</p></article>
+            <article class="req-card"><h3>RF09 Notificacoes</h3><p>Enviar avisos de validacao, submissao, distribuicao, pendencia, parecer concluido e expiracao de acesso.</p></article>
+            <article class="req-card"><h3>RF10 Inteligencia gerencial</h3><p>Expor dashboard operacional, indicadores por status, fila por relator e base para BI institucional.</p></article>
+            <article class="req-card"><h3>RF11 Integracoes de identidade</h3><p>Suportar Google, Gov.br e outras identidades institucionais aprovadas no roadmap do produto.</p></article>
+            <article class="req-card"><h3>RF12 Governanca documental</h3><p>Permitir aderencia dos formularios aos modelos oficiais e evolucao controlada de templates.</p></article>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Requisitos nao funcionais do produto</p>
+              <h2>Como o sistema deve se comportar</h2>
+            </div>
+          </div>
+          <div class="requirement-grid">
+            <article class="req-card soft"><h3>RNF01 Seguranca</h3><p>Operar com HTTPS, RBAC, segredos protegidos, uploads privados, rate limit, protecao de docs e hardening de producao.</p></article>
+            <article class="req-card soft"><h3>RNF02 Privacidade e conformidade</h3><p>Minimizar exposicao de dados, manter rastreabilidade institucional e obedecer politicas de acesso e retencao.</p></article>
+            <article class="req-card soft"><h3>RNF03 Disponibilidade</h3><p>Subir com persistencia, health check, restart controlado, backup e rotina de restore validada.</p></article>
+            <article class="req-card soft"><h3>RNF04 Manutenibilidade</h3><p>Manter arquitetura em camadas, migrations, documentacao, separacao de responsabilidades e base preparada para evolucao.</p></article>
+            <article class="req-card soft"><h3>RNF05 Usabilidade institucional</h3><p>Ter interface previsivel, profissional, responsiva, com feedback claro e reducao de ruido por perfil.</p></article>
+            <article class="req-card soft"><h3>RNF06 Observabilidade</h3><p>Permitir auditoria, leitura operacional, logs e apoio a diagnostico de falhas e gargalos.</p></article>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="two-column">
+            <div class="panel">
+              <p class="section-kicker">Estado atual preservado</p>
+              <h2>O que ja cobre parte desses requisitos</h2>
+              <div class="badge-list">
+                <span class="soft-badge">Login local</span>
+                <span class="soft-badge">Gestao de usuarios</span>
+                <span class="soft-badge">Rascunho e submissao</span>
+                <span class="soft-badge">Triagem e distribuicao</span>
+                <span class="soft-badge">Parecer em PDF</span>
+                <span class="soft-badge">Auditoria</span>
+              </div>
+            </div>
+            <div class="panel">
+              <p class="section-kicker">Leitura correta desta pagina</p>
+              <h2>Requisito nao e sinonimo de entregue</h2>
+              <p class="hero-text compact">
+                Nesta pagina, o requisito representa o que o produto deve contemplar como alvo. A
+                cobertura atual continua visivel ao lado para nao perder o contexto real de maturidade
+                do sistema ja construido.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

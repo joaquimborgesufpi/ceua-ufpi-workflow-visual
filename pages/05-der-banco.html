@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MER e banco - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a class="active" href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 05</p>
+          <h1>MER conceitual e leitura do banco</h1>
+          <p class="hero-text">
+            O modelo de dados deve sustentar usuarios, protocolos, anexos, pareceres, historico,
+            notificacoes, pendencias e expansoes futuras sem perder rastreabilidade institucional.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">MER visual</p>
+              <h2>Mapa conceitual das entidades e relacoes</h2>
+            </div>
+          </div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 760" role="img" aria-labelledby="mer-title mer-desc">
+              <title id="mer-title">MER conceitual do sistema CEUA</title>
+              <desc id="mer-desc">Entidades principais do sistema e suas relacoes mais relevantes.</desc>
+              <defs>
+                <marker id="mer-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L10,3 L0,6 Z" fill="#28574e"></path>
+                </marker>
+              </defs>
+
+              <rect x="60" y="70" width="220" height="90" rx="10" class="node actor-admin-fill" />
+              <text x="85" y="108" class="node-title node-title-sm">usuarios</text>
+              <text x="85" y="136" class="node-text">conta, status, validacao</text>
+
+              <rect x="340" y="70" width="220" height="90" rx="10" class="node actor-sistema-fill" />
+              <text x="365" y="108" class="node-title node-title-sm">usuarios_perfis</text>
+              <text x="365" y="136" class="node-text">ADMIN, SECRETARIA, MEMBRO_CEUA</text>
+
+              <rect x="620" y="70" width="240" height="90" rx="10" class="node actor-relator-fill" />
+              <text x="645" y="108" class="node-title node-title-sm">protocolos</text>
+              <text x="645" y="136" class="node-text">status, datas, relator, responsavel</text>
+
+              <rect x="920" y="70" width="240" height="90" rx="10" class="node actor-solicitante-fill" />
+              <text x="945" y="108" class="node-title node-title-sm">formularios_respostas</text>
+              <text x="945" y="136" class="node-text">campos dinamicos do protocolo</text>
+
+              <rect x="80" y="270" width="240" height="90" rx="10" class="node actor-solicitante-fill" />
+              <text x="105" y="308" class="node-title node-title-sm">documentos_anexos</text>
+              <text x="105" y="336" class="node-text">PDFs e metadados</text>
+
+              <rect x="380" y="270" width="240" height="90" rx="10" class="node actor-secretaria-fill" />
+              <text x="405" y="308" class="node-title node-title-sm">protocolos_status_historico</text>
+              <text x="405" y="336" class="node-text">timeline de transicoes</text>
+
+              <rect x="680" y="270" width="240" height="90" rx="10" class="node actor-relator-fill" />
+              <text x="705" y="308" class="node-title node-title-sm">julgamentos_pareceres</text>
+              <text x="705" y="336" class="node-text">parecer, relator, resultado</text>
+
+              <rect x="980" y="270" width="200" height="90" rx="10" class="node actor-sistema-fill" />
+              <text x="1005" y="308" class="node-title node-title-sm">notificacoes</text>
+              <text x="1005" y="336" class="node-text">fila de aviso institucional</text>
+
+              <rect x="260" y="470" width="240" height="90" rx="10" class="node actor-secretaria-fill" />
+              <text x="285" y="508" class="node-title node-title-sm">tarefas_pendencias</text>
+              <text x="285" y="536" class="node-text">pendencias e retorno ao fluxo</text>
+
+              <rect x="760" y="470" width="240" height="90" rx="10" class="node actor-admin-fill" />
+              <text x="785" y="508" class="node-title node-title-sm">auditoria_logs</text>
+              <text x="785" y="536" class="node-text">eventos sensiveis e operacionais</text>
+
+              <path d="M280 115 H340" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M560 115 H620" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M860 115 H920" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M740 160 V270" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M720 160 C720 210 500 220 500 270" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M660 160 C660 210 200 220 200 270" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M850 160 C850 210 1080 220 1080 270" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M800 360 V470" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M500 360 V470" class="arrow-line" style="marker-end:url(#mer-arrow)" />
+              <path d="M620 115 C520 115 400 420 380 470" class="arrow-line dashed" style="marker-end:url(#mer-arrow)" />
+              <path d="M220 160 C220 260 820 380 820 470" class="arrow-line dashed" style="marker-end:url(#mer-arrow)" />
+
+              <text x="292" y="98" class="lane-label">N:N</text>
+              <text x="585" y="98" class="lane-label">1:N</text>
+              <text x="882" y="98" class="lane-label">1:N</text>
+              <text x="753" y="226" class="lane-label">1:N</text>
+              <text x="514" y="230" class="lane-label">1:N</text>
+              <text x="214" y="230" class="lane-label">1:N</text>
+              <text x="1088" y="230" class="lane-label">1:N</text>
+              <text x="812" y="426" class="lane-label">1:N</text>
+              <text x="512" y="426" class="lane-label">1:N</text>
+
+              <rect x="70" y="630" width="1120" height="86" rx="14" class="note-box" />
+              <text x="100" y="665" class="note-title">Leitura do MER</text>
+              <text x="100" y="694" class="note-text">usuarios sustentam identidade e perfis; protocolos concentram o fluxo; anexos, respostas, pareceres, historico, notificacoes, pendencias e auditoria orbitam o protocolo como nucleo institucional.</text>
+            </svg>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="panel">
+            <p class="section-kicker">Relacionamentos</p>
+            <h2>Leitura pratica do MER</h2>
+            <div class="stack-list">
+              <div class="stack-item"><strong>usuarios 1:N protocolos</strong><span>Um usuario pode criar muitos protocolos.</span></div>
+              <div class="stack-item"><strong>protocolos 1:N documentos_anexos</strong><span>Um protocolo possui varios anexos.</span></div>
+              <div class="stack-item"><strong>protocolos 1:N formularios_respostas</strong><span>Um protocolo guarda respostas dinamicas do formulario.</span></div>
+              <div class="stack-item"><strong>protocolos 1:N julgamentos_pareceres</strong><span>Um protocolo pode acumular pareceres ao longo do ciclo.</span></div>
+              <div class="stack-item"><strong>protocolos 1:N protocolos_status_historico</strong><span>Cada mudanca de status vira uma linha de historico.</span></div>
+              <div class="stack-item"><strong>usuarios N:N perfis</strong><span>Um usuario pode acumular mais de um perfil operacional.</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="two-column">
+            <div class="panel">
+              <p class="section-kicker">Entidades previstas</p>
+              <h2>Catalogo resumido do modelo</h2>
+              <div class="badge-list">
+                <span class="soft-badge">usuarios</span>
+                <span class="soft-badge">usuarios_perfis</span>
+                <span class="soft-badge">protocolos</span>
+                <span class="soft-badge">documentos_anexos</span>
+                <span class="soft-badge">formularios_respostas</span>
+                <span class="soft-badge">julgamentos_pareceres</span>
+                <span class="soft-badge">protocolos_status_historico</span>
+                <span class="soft-badge">notificacoes</span>
+                <span class="soft-badge">tarefas_pendencias</span>
+                <span class="soft-badge">auditoria_logs</span>
+              </div>
+            </div>
+            <div class="panel">
+              <p class="section-kicker">Estado atual preservado</p>
+              <h2>Base ja existente no portal</h2>
+              <p class="hero-text compact">
+                A leitura acima continua alinhada com a base relacional que ja vem sendo descrita no
+                projeto, mas agora apresentada como modelo-alvo de dados, e nao apenas como fotografia
+                do que ja foi implementado.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

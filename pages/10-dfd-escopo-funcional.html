@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DFD e escopo funcional - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a class="active" href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 10</p>
+          <h1>DFDs e escopo funcional</h1>
+          <p class="hero-text">
+            Esta pagina traduz o sistema em fluxo de dados de alto nivel, fluxo detalhado por funcao e mapa de escopo funcional.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head"><div><p class="section-kicker">DFD nivel 0</p><h2>Contexto geral do sistema</h2></div></div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 480" role="img" aria-labelledby="dfd0-title dfd0-desc">
+              <title id="dfd0-title">DFD nivel 0</title>
+              <desc id="dfd0-desc">Usuarios, proxy, sistema, banco, uploads e identidade externa.</desc>
+              <rect x="470" y="140" width="320" height="120" rx="12" class="node actor-sistema-fill" />
+              <text x="540" y="188" class="node-title">Sistema CEUA</text>
+              <text x="530" y="218" class="node-text">frontend + API + regras</text>
+              <rect x="120" y="80" width="180" height="70" rx="10" class="node actor-solicitante-fill" />
+              <text x="155" y="122" class="node-title node-title-sm">Solicitante</text>
+              <rect x="120" y="200" width="180" height="70" rx="10" class="node actor-secretaria-fill" />
+              <text x="155" y="242" class="node-title node-title-sm">Secretaria</text>
+              <rect x="120" y="320" width="180" height="70" rx="10" class="node actor-relator-fill" />
+              <text x="145" y="362" class="node-title node-title-sm">Membro CEUA</text>
+              <rect x="930" y="80" width="190" height="70" rx="10" class="node actor-admin-fill" />
+              <text x="980" y="122" class="node-title node-title-sm">Administrador</text>
+              <rect x="930" y="200" width="190" height="70" rx="10" class="node actor-admin-fill" />
+              <text x="980" y="242" class="node-title node-title-sm">PostgreSQL</text>
+              <rect x="930" y="320" width="190" height="70" rx="10" class="node actor-solicitante-fill" />
+              <text x="962" y="362" class="node-title node-title-sm">Uploads privados</text>
+              <rect x="470" y="320" width="320" height="80" rx="12" class="node actor-secretaria-fill" />
+              <text x="520" y="367" class="node-title node-title-sm">AD / Email / identidades externas</text>
+              <line x1="300" y1="115" x2="470" y2="170" class="uml-link" />
+              <line x1="300" y1="235" x2="470" y2="205" class="uml-link" />
+              <line x1="300" y1="355" x2="470" y2="235" class="uml-link" />
+              <line x1="790" y1="170" x2="930" y2="115" class="uml-link" />
+              <line x1="790" y1="205" x2="930" y2="235" class="uml-link" />
+              <line x1="790" y1="235" x2="930" y2="355" class="uml-link" />
+              <line x1="630" y1="260" x2="630" y2="320" class="uml-link dashed" />
+            </svg>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head"><div><p class="section-kicker">DFD nivel 1</p><h2>Explosao funcional interna</h2></div></div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 620" role="img" aria-labelledby="dfd1-title dfd1-desc">
+              <title id="dfd1-title">DFD nivel 1</title>
+              <desc id="dfd1-desc">Frontend, autenticacao, usuarios, protocolos, julgamento e auditoria.</desc>
+              <rect x="70" y="250" width="190" height="90" rx="10" class="node actor-solicitante-fill" />
+              <text x="115" y="300" class="node-title node-title-sm">Frontend</text>
+              <rect x="330" y="90" width="220" height="90" rx="10" class="node actor-secretaria-fill" />
+              <text x="370" y="140" class="node-title node-title-sm">Autenticacao</text>
+              <rect x="330" y="210" width="220" height="90" rx="10" class="node actor-admin-fill" />
+              <text x="392" y="260" class="node-title node-title-sm">Usuarios</text>
+              <rect x="330" y="330" width="220" height="90" rx="10" class="node actor-relator-fill" />
+              <text x="387" y="380" class="node-title node-title-sm">Protocolos</text>
+              <rect x="330" y="450" width="220" height="90" rx="10" class="node actor-relator-fill" />
+              <text x="387" y="500" class="node-title node-title-sm">Julgamento</text>
+              <rect x="650" y="250" width="220" height="90" rx="10" class="node actor-sistema-fill" />
+              <text x="702" y="300" class="node-title node-title-sm">Auditoria</text>
+              <rect x="960" y="180" width="190" height="90" rx="10" class="node actor-admin-fill" />
+              <text x="1007" y="230" class="node-title node-title-sm">Banco</text>
+              <rect x="960" y="320" width="190" height="90" rx="10" class="node actor-solicitante-fill" />
+              <text x="988" y="370" class="node-title node-title-sm">Uploads</text>
+              <line x1="260" y1="295" x2="330" y2="135" class="uml-link" />
+              <line x1="260" y1="295" x2="330" y2="255" class="uml-link" />
+              <line x1="260" y1="295" x2="330" y2="375" class="uml-link" />
+              <line x1="260" y1="295" x2="330" y2="495" class="uml-link" />
+              <line x1="550" y1="135" x2="650" y2="295" class="uml-link dashed" />
+              <line x1="550" y1="255" x2="650" y2="295" class="uml-link dashed" />
+              <line x1="550" y1="375" x2="650" y2="295" class="uml-link dashed" />
+              <line x1="550" y1="495" x2="650" y2="295" class="uml-link dashed" />
+              <line x1="870" y1="295" x2="960" y2="225" class="uml-link" />
+              <line x1="550" y1="375" x2="960" y2="365" class="uml-link" />
+            </svg>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section-head"><div><p class="section-kicker">Escopo funcional</p><h2>Mapa do que o sistema deve cobrir</h2></div></div>
+          <div class="portal-grid">
+            <article class="portal-card as-panel"><h3>Autenticacao</h3><p>Cadastro, login, validacao, expiracao, reativacao e identidades externas.</p></article>
+            <article class="portal-card as-panel"><h3>Usuarios</h3><p>Perfis, filtros, paginacao, criacao, edicao, reset de senha e governanca de acesso.</p></article>
+            <article class="portal-card as-panel"><h3>Protocolos</h3><p>Rascunho, anexos, submissao, triagem, distribuicao, julgamento e conclusao.</p></article>
+            <article class="portal-card as-panel"><h3>Relatoria</h3><p>Atribuicoes visuais, parecer textual, PDF e devolucao com pendencia.</p></article>
+            <article class="portal-card as-panel"><h3>Auditoria</h3><p>Eventos sensiveis, historico de status, acesso a docs e trilha institucional.</p></article>
+            <article class="portal-card as-panel"><h3>Camada futura</h3><p>Notificacoes, dashboards, BI, IA e integracoes como Google e Gov.br.</p></article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

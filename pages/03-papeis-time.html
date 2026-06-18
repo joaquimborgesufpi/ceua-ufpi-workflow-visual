@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Papeis do time - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a class="active" href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 03</p>
+          <h1>Papeis do time e fluxo de entrega</h1>
+          <p class="hero-text">
+            Aqui o foco nao e o usuario final da CEUA, e sim quem organiza, projeta, implementa,
+            valida e publica o sistema.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Papeis</p>
+              <h2>Tarefa principal de cada funcao</h2>
+            </div>
+          </div>
+          <div class="portal-grid">
+            <article class="portal-card as-panel"><h3>PO</h3><p>Define escopo, prioriza backlog, valida aderencia com a CEUA e fecha criterio de aceite de negocio.</p></article>
+            <article class="portal-card as-panel"><h3>TL</h3><p>Decide arquitetura, padroes, limites tecnicos, revisao de risco e direcionamento de implementacao.</p></article>
+            <article class="portal-card as-panel"><h3>DEV</h3><p>Implementa backend, frontend, integracoes, correcoes, migracoes e refinamentos funcionais.</p></article>
+            <article class="portal-card as-panel"><h3>QA</h3><p>Valida fluxo, regras, regressao, evidencias de teste e comportamento esperado por perfil.</p></article>
+            <article class="portal-card as-panel"><h3>DevOps</h3><p>Cuida de deploy, Docker, proxy, HTTPS, backup, observabilidade, restore e operacao segura.</p></article>
+            <article class="portal-card as-panel"><h3>SM</h3><p>Organiza o fluxo do time, remove impedimentos, acompanha entrega e facilita alinhamento.</p></article>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Fluxo de engenharia</p>
+              <h2>Como a entrega deveria circular</h2>
+            </div>
+          </div>
+          <div class="timeline-list">
+            <article class="timeline-row">
+              <span class="timeline-index">1</span>
+              <div><h3>PO organiza demanda</h3><p>Escopo, prioridade, regra de negocio e definicao do que significa pronto.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">2</span>
+              <div><h3>TL modela abordagem</h3><p>Arquitetura, impacto tecnico, dependencias e corte de complexidade.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">3</span>
+              <div><h3>DEV implementa</h3><p>Backend, frontend, migrations, ajustes de UX e protecoes necessarias.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">4</span>
+              <div><h3>QA valida</h3><p>Fluxo manual, cenarios de excecao, perfis, download, status e regressao.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">5</span>
+              <div><h3>DevOps publica</h3><p>Deploy controlado, variaveis seguras, HTTPS, backup e verificacao operacional.</p></div>
+            </article>
+            <article class="timeline-row">
+              <span class="timeline-index">6</span>
+              <div><h3>SM acompanha</h3><p>Ritmo do time, desbloqueio e estabilidade da entrega ao longo do ciclo.</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="panel">
+            <p class="section-kicker">Matriz simples</p>
+            <h2>Quem lidera cada frente</h2>
+            <div class="permission-table">
+              <div class="permission-row permission-head"><span>Frente</span><span>Papel lider</span></div>
+              <div class="permission-row"><span>Backlog e prioridade</span><span>PO</span></div>
+              <div class="permission-row"><span>Arquitetura e decisao tecnica</span><span>TL</span></div>
+              <div class="permission-row"><span>Implementacao de codigo</span><span>DEV</span></div>
+              <div class="permission-row"><span>Validacao funcional</span><span>QA</span></div>
+              <div class="permission-row"><span>Publicacao e operacao</span><span>DevOps</span></div>
+              <div class="permission-row"><span>Coordenacao do fluxo do time</span><span>SM</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVC da aplicacao - CEUA CAFS-UFPI</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="../index.html">Portal visual CEUA CAFS-UFPI</a>
+          <nav class="main-nav">
+            <div class="nav-group">
+              <span class="nav-group-label">Produto</span>
+              <a href="./01-visao-geral.html">Visao geral</a>
+              <a href="./02-fluxo-operacional.html">Fluxo</a>
+              <a href="./06-requisitos.html">Requisitos</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Governanca</span>
+              <a href="./03-papeis-time.html">Time</a>
+              <a href="./11-arquitetura-completa.html">Executivo</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Arquitetura</span>
+              <a href="./04-arquitetura-infra.html">Infra</a>
+              <a class="active" href="./07-mvc-aplicacao.html">MVC</a>
+              <a href="./05-der-banco.html">MER</a>
+            </div>
+            <div class="nav-group">
+              <span class="nav-group-label">Diagramas</span>
+              <a href="./08-uml-casos-de-uso.html">Casos de uso</a>
+              <a href="./09-uml-sequencia-estados.html">Sequencia e estados</a>
+              <a href="./10-dfd-escopo-funcional.html">DFD e escopo</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <header class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="eyebrow">Pagina 07</p>
+          <h1>MVC da aplicacao</h1>
+          <p class="hero-text">
+            Embora a base atual seja um monolito modular e nao um MVC academico puro, a arquitetura
+            pode ser lida visualmente por camadas equivalentes de view, controller, service/model e persistencia.
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="band">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Diagrama MVC</p>
+              <h2>Leitura visual da arquitetura da aplicacao</h2>
+            </div>
+          </div>
+          <div class="diagram-wrap">
+            <svg class="workflow-svg" viewBox="0 0 1260 620" role="img" aria-labelledby="mvc-title mvc-desc">
+              <title id="mvc-title">MVC da aplicacao CEUA</title>
+              <desc id="mvc-desc">Camadas de view, controller, services, repositories e models conectadas ao banco e aos uploads.</desc>
+              <defs>
+                <marker id="mvc-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L10,3 L0,6 Z" fill="#28574e"></path>
+                </marker>
+              </defs>
+
+              <rect x="70" y="70" width="220" height="110" rx="10" class="node actor-solicitante-fill" />
+              <text x="95" y="108" class="node-title node-title-sm">View</text>
+              <text x="95" y="136" class="node-text">HTML</text>
+              <text x="95" y="160" class="node-text">CSS</text>
+              <text x="95" y="184" class="node-text">JavaScript vanilla</text>
+
+              <rect x="360" y="70" width="230" height="110" rx="10" class="node actor-secretaria-fill" />
+              <text x="385" y="108" class="node-title node-title-sm">Controller</text>
+              <text x="385" y="136" class="node-text">FastAPI Routers</text>
+              <text x="385" y="160" class="node-text">Dependencias</text>
+              <text x="385" y="184" class="node-text">Autorizacao HTTP</text>
+
+              <rect x="660" y="70" width="250" height="110" rx="10" class="node actor-relator-fill" />
+              <text x="685" y="108" class="node-title node-title-sm">Services / Regras</text>
+              <text x="685" y="136" class="node-text">AuthService</text>
+              <text x="685" y="160" class="node-text">ProtocoloService</text>
+              <text x="685" y="184" class="node-text">JulgamentoService</text>
+
+              <rect x="980" y="70" width="210" height="110" rx="10" class="node actor-admin-fill" />
+              <text x="1005" y="108" class="node-title node-title-sm">Model</text>
+              <text x="1005" y="136" class="node-text">SQLAlchemy Models</text>
+              <text x="1005" y="160" class="node-text">Schemas</text>
+              <text x="1005" y="184" class="node-text">Enums de dominio</text>
+
+              <rect x="420" y="280" width="240" height="110" rx="10" class="node actor-sistema-fill" />
+              <text x="445" y="318" class="node-title node-title-sm">Repositories</text>
+              <text x="445" y="346" class="node-text">Consultas</text>
+              <text x="445" y="370" class="node-text">Persistencia transacional</text>
+
+              <rect x="740" y="280" width="220" height="110" rx="10" class="node actor-sistema-fill" />
+              <text x="765" y="318" class="node-title node-title-sm">Auditoria / Governanca</text>
+              <text x="765" y="346" class="node-text">logs, historico</text>
+              <text x="765" y="370" class="node-text">formularios dinamicos</text>
+
+              <rect x="310" y="470" width="220" height="90" rx="10" class="node actor-admin-fill" />
+              <text x="335" y="508" class="node-title node-title-sm">PostgreSQL</text>
+              <text x="335" y="536" class="node-text">dados relacionais</text>
+
+              <rect x="600" y="470" width="220" height="90" rx="10" class="node actor-solicitante-fill" />
+              <text x="625" y="508" class="node-title node-title-sm">Uploads privados</text>
+              <text x="625" y="536" class="node-text">PDFs e anexos</text>
+
+              <rect x="890" y="470" width="220" height="90" rx="10" class="node actor-secretaria-fill" />
+              <text x="915" y="508" class="node-title node-title-sm">Servicos externos</text>
+              <text x="915" y="536" class="node-text">AD, e-mail, futuras identidades</text>
+
+              <path d="M290 125 H360" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+              <path d="M590 125 H660" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+              <path d="M910 125 H980" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+              <path d="M785 180 C785 230 540 230 540 280" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+              <path d="M820 180 C820 230 850 230 850 280" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+              <path d="M540 390 V470" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+              <path d="M660 180 C660 270 710 320 710 470" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+              <path d="M910 180 C980 240 1000 330 1000 470" class="arrow-line" style="marker-end:url(#mvc-arrow)" />
+            </svg>
+          </div>
+        </section>
+
+        <section class="band band-muted">
+          <div class="two-column">
+            <div class="panel">
+              <p class="section-kicker">Leitura correta</p>
+              <h2>Onde a aplicacao parece MVC</h2>
+              <div class="stack-list">
+                <div class="stack-item"><strong>View</strong><span>Frontend estatico com telas e scripts.</span></div>
+                <div class="stack-item"><strong>Controller</strong><span>Routers FastAPI e camada HTTP.</span></div>
+                <div class="stack-item"><strong>Model</strong><span>Modelos ORM, enums, schemas e persistencia.</span></div>
+              </div>
+            </div>
+            <div class="panel">
+              <p class="section-kicker">Leitura mais precisa</p>
+              <h2>O que ela realmente e</h2>
+              <p class="hero-text compact">
+                Em rigor arquitetural, a aplicacao se comporta melhor como um monolito modular em
+                camadas, porque a regra de negocio vive com forca nos `services` e a persistencia fica
+                nos `repositories` e `models`. Ainda assim, a leitura em MVC ajuda muito na comunicacao visual.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../assets/workflow.js"></script>
+  </body>
+</html>
